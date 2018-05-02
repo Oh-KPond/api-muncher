@@ -50,6 +50,9 @@ group :development, :test do
   gem 'pry-rails'
 
   gem 'dotenv-rails'
+
+  gem 'minitest-vcr'
+  gem 'webmock'
 end
 
 group :test do

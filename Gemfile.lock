@@ -136,7 +136,6 @@ GEM
       builder
       minitest (>= 5.0)
       ruby-progressbar
-<<<<<<< HEAD
     minitest-skip (0.0.1)
       minitest (~> 5.0)
     minitest-spec-rails (5.4.0)
@@ -146,8 +145,6 @@ GEM
       minispec-metadata (~> 2.0)
       minitest (>= 4.7.5)
       vcr (>= 2.9)
-=======
->>>>>>> parent of f9c9a39... updates gems needed for project
     msgpack (1.2.4)
     multi_json (1.13.1)
     multi_xml (0.6.0)
@@ -195,12 +192,9 @@ GEM
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     ruby-progressbar (1.9.0)
-<<<<<<< HEAD
-    safe_yaml (1.0.4)
-=======
     ruby_dep (1.5.0)
     rubyzip (1.2.1)
->>>>>>> parent of f9c9a39... updates gems needed for project
+    safe_yaml (1.0.4)
     sass (3.4.25)
     sass-rails (5.0.7)
       railties (>= 4.0.0, < 6)
@@ -272,12 +266,9 @@ DEPENDENCIES
   listen (>= 3.0.5, < 3.2)
   minitest-rails
   minitest-reporters
-<<<<<<< HEAD
   minitest-skip
   minitest-spec-rails
   minitest-vcr
-=======
->>>>>>> parent of f9c9a39... updates gems needed for project
   normalize-rails
   pg (>= 0.18, < 2.0)
   pry-rails

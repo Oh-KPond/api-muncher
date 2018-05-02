@@ -45,9 +45,9 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     ansi (1.5.0)
+    archive-zip (0.11.0)
+      io-like (~> 0.3.0)
     arel (9.0.0)
-    autoprefixer-rails (8.4.1)
-      execjs
     babel-source (5.8.35)
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
@@ -57,15 +57,30 @@ GEM
       erubi (>= 1.0.0)
       rack (>= 0.9.0)
     bindex (0.5.0)
+    binding_of_caller (0.8.0)
+      debug_inspector (>= 0.0.1)
     bootsnap (1.3.0)
       msgpack (~> 1.0)
     builder (3.2.3)
     byebug (10.0.2)
+    capybara (3.0.3)
+      addressable
+      mini_mime (>= 0.1.3)
+      nokogiri (~> 1.8)
+      rack (>= 1.6.0)
+      rack-test (>= 0.6.3)
+      xpath (~> 3.0)
+    childprocess (0.9.0)
+      ffi (~> 1.0, >= 1.0.11)
+    chromedriver-helper (1.2.0)
+      archive-zip (~> 0.10)
+      nokogiri (~> 1.8)
     coderay (1.1.2)
     concurrent-ruby (1.0.5)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     crass (1.0.4)
+    debug_inspector (0.0.3)
     dotenv (2.4.0)
     dotenv-rails (2.4.0)
       dotenv (= 2.4.0)
@@ -84,6 +99,7 @@ GEM
       multi_xml (>= 0.5.2)
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
+    io-like (0.3.0)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
@@ -94,9 +110,10 @@ GEM
     jquery-turbolinks (2.1.0)
       railties (>= 3.1.0)
       turbolinks
-    listen (3.0.8)
+    listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+      ruby_dep (~> 1.2)
     loofah (2.2.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -119,6 +136,7 @@ GEM
       builder
       minitest (>= 5.0)
       ruby-progressbar
+<<<<<<< HEAD
     minitest-skip (0.0.1)
       minitest (~> 5.0)
     minitest-spec-rails (5.4.0)
@@ -128,6 +146,8 @@ GEM
       minispec-metadata (~> 2.0)
       minitest (>= 4.7.5)
       vcr (>= 2.9)
+=======
+>>>>>>> parent of f9c9a39... updates gems needed for project
     msgpack (1.2.4)
     multi_json (1.13.1)
     multi_xml (0.6.0)
@@ -175,7 +195,12 @@ GEM
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     ruby-progressbar (1.9.0)
+<<<<<<< HEAD
     safe_yaml (1.0.4)
+=======
+    ruby_dep (1.5.0)
+    rubyzip (1.2.1)
+>>>>>>> parent of f9c9a39... updates gems needed for project
     sass (3.4.25)
     sass-rails (5.0.7)
       railties (>= 4.0.0, < 6)
@@ -183,6 +208,9 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    selenium-webdriver (3.11.0)
+      childprocess (~> 0.5)
+      rubyzip (~> 1.2)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -222,33 +250,41 @@ GEM
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
+    xpath (3.0.0)
+      nokogiri (~> 1.8)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  autoprefixer-rails
   better_errors
+  binding_of_caller
   bootsnap (>= 1.1.0)
   byebug
+  capybara (>= 2.15, < 4.0)
+  chromedriver-helper
   dotenv-rails
   foundation-rails
   httparty
   jbuilder (~> 2.5)
   jquery-rails
   jquery-turbolinks
-  listen (~> 3.0.5)
+  listen (>= 3.0.5, < 3.2)
   minitest-rails
   minitest-reporters
+<<<<<<< HEAD
   minitest-skip
   minitest-spec-rails
   minitest-vcr
+=======
+>>>>>>> parent of f9c9a39... updates gems needed for project
   normalize-rails
   pg (>= 0.18, < 2.0)
   pry-rails
   puma (~> 3.11)
   rails (~> 5.2.0)
   sass-rails (~> 5.0)
+  selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)

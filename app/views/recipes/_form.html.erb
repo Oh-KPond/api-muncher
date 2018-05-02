@@ -1,0 +1,5 @@
+<%= form_tag recipes_path(@query), method: "post" do %>
+  <%= text_field_tag(:query) %>
+  <%= submit_tag("Search") %>
+
+<% end %>

@@ -6,6 +6,7 @@ class RecipesController < ApplicationController
   end
 
   def new
+    @query = params[:query]
   end
 
   def create

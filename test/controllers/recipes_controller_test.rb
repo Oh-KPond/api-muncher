@@ -22,11 +22,11 @@ describe RecipesController do
       end
     end
 
-    it "redirects when index is accessed without params" do
+    it "succeeds when there are recipes" do
       VCR.use_cassette("index") do
 
         get recipes_path
-        must_respond_with :redirect
+        must_respond_with :success
       end
     end
   end
@@ -51,24 +51,24 @@ describe RecipesController do
     end
   end
 
-  # describe "#create" do
-  #   it "can send a new search" do
-  #     VCR.use_cassette("create") do
-  #       query = "chicken"
-  #
-  #       get recipes_path(query)
-  #       must_respond_with :redirect
-  #       must_redirect_to recipes_path
-  #     end
-  #   end
-  #
-  #   it "raises an error if query is not valid" do
-  #     VCR.use_cassette("create") do
-  #
-  #       get recipes_path(nil)
-  #       flash[:alert].must_equal "Error inquiring"
-  #     end
-  #   end
-  # end
+  describe "#create" do
+    it "can send a new search" do
+      VCR.use_cassette("create") do
+        query = "chicken"
+
+        get recipes_path(query)
+        must_respond_with :redirect
+        must_redirect_to recipes_path
+      end
+    end
+
+    it "raises an error if query is not valid" do
+      VCR.use_cassette("create") do
+
+        get recipes_path(nil)
+        flash[:alert].must_equal "Error inquiring"
+      end
+    end
+  end
 
 end

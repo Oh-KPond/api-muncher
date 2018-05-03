@@ -6,13 +6,6 @@ require "minitest/reporters"  # for Colorized output
 require 'vcr'
 require 'webmock/minitest'
 
-#  For colorful output!
-Minitest::Reporters.use!(
-  Minitest::Reporters::SpecReporter.new,
-  ENV,
-  Minitest.backtrace_filter
-)
-
 # Needed because project was updated in a unique way
 # https://github.com/rails/rails/issues/31324
 # https://github.com/rails/rails/issues/31324#issuecomment-380258349
@@ -20,6 +13,12 @@ if ActionPack::VERSION::STRING >= "5.2.0"
   Minitest::Rails::TestUnit = Rails::TestUnit
 end
 
+#  For colorful output!
+Minitest::Reporters.use!(
+  Minitest::Reporters::SpecReporter.new,
+  ENV,
+  Minitest.backtrace_filter
+)
 
 # To add Capybara feature tests add `gem "minitest-rails-capybara"`
 # to the test group in the Gemfile and uncomment the following:

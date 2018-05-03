@@ -1,13 +1,14 @@
 require 'test_helper'
 
 describe EdamamApiWrapper do
-  it "Can send valid query to api" do
+  it "can send a valid query to api" do
     query = "soup"
 
     VCR.use_cassette("results") do
       response = EdamamApiWrapper.list_recipes(query)
-      binding.pry
-      response["q"].must_equal query
+
+      response.must_be_kind_of Array
+      response.first.must_be_kind_of Recipe
     end
   end
 end

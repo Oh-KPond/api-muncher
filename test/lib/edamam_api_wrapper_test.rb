@@ -6,7 +6,7 @@ describe EdamamApiWrapper do
 
     VCR.use_cassette("results") do
       response = EdamamApiWrapper.list_recipes(query)
-binding.pry
+
       response.must_be_kind_of Array
       response.first.must_be_kind_of Recipe
     end

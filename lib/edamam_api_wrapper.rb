@@ -13,7 +13,7 @@ class EdamamApiWrapper
 
     if response["hits"]
       response["hits"].each do |hit|
-      recipes_list << Recipe.new(hit["recipe"]["label"], hit["recipe"]["uri"])
+      recipes_list << Recipe.new(hit["recipe"]["label"], hit["recipe"]["uri"], hit["recipe"]["image"])
       end
     end
 

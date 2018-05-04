@@ -5,8 +5,8 @@ class RecipesController < ApplicationController
       redirect_to root_path
       # flash
     else
-      @recipes = EdamamApiWrapper.list_recipes(params[:query])
       @query = params[:query]
+      @recipes = EdamamApiWrapper.list_recipes(@query).paginate(page: params[:page], per_page: 10)
     end
   end
 

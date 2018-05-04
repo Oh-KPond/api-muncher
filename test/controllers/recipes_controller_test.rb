@@ -12,7 +12,7 @@ describe RecipesController do
   it "should get index" do
     VCR.use_cassette("index") do
 
-      get recipes_path
+      get recipes_path, params: {query: "chicken"}
       must_respond_with :success
     end
   end
@@ -36,7 +36,7 @@ describe RecipesController do
   it "can send a new search" do
     VCR.use_cassette("create") do
 
-      post recipes_path
+      get recipes_path, params: {query: "chicken"}
       must_redirect_to recipes_path
     end
   end

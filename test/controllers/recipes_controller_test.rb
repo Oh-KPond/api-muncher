@@ -20,7 +20,7 @@ describe RecipesController do
   it "should get show" do
     VCR.use_cassette("show") do
 
-      get recipe_path ("PLACEHOLDER")
+      get recipe_path ("7543ecfa28b7506a97360748f017a83e")
       must_respond_with :success
     end
   end

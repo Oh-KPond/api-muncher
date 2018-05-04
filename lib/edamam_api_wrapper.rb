@@ -27,8 +27,8 @@ class EdamamApiWrapper
       recipe =
       Recipe.new(
         response[0]["label"],
-        response[0]["image"],
         response[0]["uri"],
+        response[0]["image"],
         source: response[0]["source"],
         ingredients: response[0]["ingredientLines"],
         labels: response[0]["dietLabels"]

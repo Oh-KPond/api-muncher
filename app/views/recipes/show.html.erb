@@ -4,4 +4,27 @@
 </section>
 
 <h2><%= @recipe.title %></h2>
-<h3><%= @recipe.source %></h3>
+<h3>By <%= @recipe.source %></h3>
+
+<section class="recipe-details">
+  <%= image_tag(@recipe.img, size: "500x500", alt: @recipe.title) %>
+  <section class="ingredients">
+    <h4>Ingredients</h4>
+    <% @recipe.ingredients.each do |ingredient| %>
+    <ul>
+      <li><%= ingredient %> </li>
+    </ul>
+    <% end %>
+  </section>
+</section>
+
+<section class="recipe-labels">
+  <h4>Dietary Labels</h4>
+  <% if @recipe.labels == [] %>
+    <p>No Dietary Labels</p>
+  <% else %>
+    <% @recipe.labels.each do |label| %>
+      <%= label %>
+    <% end %>
+  <% end %>
+</section>

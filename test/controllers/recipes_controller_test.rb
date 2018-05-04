@@ -32,12 +32,4 @@ describe RecipesController do
       must_respond_with :success
     end
   end
-
-  it "can send a new search" do
-    VCR.use_cassette("create") do
-
-      get recipes_path, params: {query: "chicken"}
-      must_redirect_to recipes_path
-    end
-  end
 end

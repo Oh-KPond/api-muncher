@@ -1,2 +1,7 @@
-<h1>Recipes#show</h1>
-<p>Find me in app/views/recipes/show.html.erb</p>
+<h1>Muncher</h1>
+<section class="search_form">
+  <%= render "form" %>
+</section>
+
+<h2><%= @recipe.title %></h2>
+<h3><%= @recipe.source %></h3>

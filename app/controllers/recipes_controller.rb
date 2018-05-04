@@ -12,6 +12,7 @@ class RecipesController < ApplicationController
 
   # shows a single recipe : recipe GET  /recipes/:id(.:format)
   def show
+    @recipe = EdamamApiWrapper.show_recipe(params[:id])
   end
 
   # form for search also root

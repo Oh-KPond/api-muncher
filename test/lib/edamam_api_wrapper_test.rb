@@ -11,4 +11,14 @@ describe EdamamApiWrapper do
       response.first.must_be_kind_of Recipe
     end
   end
+
+  it "can retreve information about a recipe" do
+    id = "7543ecfa28b7506a97360748f017a83e"
+
+    VCR.use_cassette("results") do
+      response = EdamamApiWrapper.show_recipe(id)
+      
+      response.must_be_kind_of Recipe
+    end
+  end
 end

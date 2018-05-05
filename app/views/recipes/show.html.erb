@@ -7,7 +7,7 @@
 
 <main class="show-page-wrapper">
   <h2 class="title"><%= @recipe.title %></h2>
-  <h3 class="source">By <%= @recipe.source %></h3>
+  <h3 class="source">By <%= link_to @recipe.source, @recipe.url, target: "_blank" %></h3>
 
   <section class="recipe-details grid-x grid-margin-x">
     <%= image_tag(@recipe.img, size: "500x500", alt: @recipe.title, class: "cell large-6") %>

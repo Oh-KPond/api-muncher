@@ -31,7 +31,8 @@ class EdamamApiWrapper
         response[0]["image"],
         source: response[0]["source"],
         ingredients: response[0]["ingredientLines"],
-        labels: response[0]["dietLabels"]
+        labels: response[0]["healthLabels"],
+        url: response[0]["url"]
       )
       return recipe
     else

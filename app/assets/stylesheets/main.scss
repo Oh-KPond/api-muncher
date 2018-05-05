@@ -1,16 +1,13 @@
 @import "base/normalize.scss";
 @import "base/_settings.scss";
 @import "base/foundation_and_overrides.scss";
-@import "styles/recipes.scss";
 @import "styles/single-recipe.scss";
+@import "styles/recipes.scss";
 @import "styles/form.scss";
 @import "styles/homepage.scss";
 
 body {
   background-color: #f2f2f2;
-}
-h1 {
-  font-family: 'Slabo 27px', serif;
 }
 
 .credit {

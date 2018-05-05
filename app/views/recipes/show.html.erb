@@ -1,30 +1,36 @@
-<h1>Muncher</h1>
-<section class="search_form">
-  <%= render "form" %>
-</section>
+<header class="page-header">
+  <h1>Muncher</h1>
+  <section class="search_form">
+    <%= render "form" %>
+  </section>
+</header>
 
-<h2><%= @recipe.title %></h2>
-<h3>By <%= @recipe.source %></h3>
+<main class="show-page-wrapper">
+  <h2 class="title"><%= @recipe.title %></h2>
+  <h3 class="source">By <%= @recipe.source %></h3>
 
-<section class="recipe-details">
-  <%= image_tag(@recipe.img, size: "500x500", alt: @recipe.title) %>
-  <section class="ingredients">
-    <h4>Ingredients</h4>
-    <% @recipe.ingredients.each do |ingredient| %>
-    <ul>
-      <li><%= ingredient %> </li>
-    </ul>
+  <section class="recipe-details grid-x grid-margin-x">
+    <%= image_tag(@recipe.img, size: "500x500", alt: @recipe.title, class: "cell large-6") %>
+    <section class="ingredients cell auto">
+      <h4>Ingredients</h4>
+      <% @recipe.ingredients.each do |ingredient| %>
+      <ul>
+        <li><%= ingredient %> </li>
+      </ul>
+      <% end %>
+    </section>
+  </section>
+
+  <section class="recipe-labels">
+    <h4>Dietary Labels</h4>
+    <% if @recipe.labels == [] %>
+    <p>No Dietary Labels</p>
+    <% else %>
+      <% @recipe.labels.each do |label| %>
+      <ul>
+        <li><%= label %></li>
+      </ul>
+      <% end %>
     <% end %>
   </section>
-</section>
-
-<section class="recipe-labels">
-  <h4>Dietary Labels</h4>
-  <% if @recipe.labels == [] %>
-    <p>No Dietary Labels</p>
-  <% else %>
-    <% @recipe.labels.each do |label| %>
-      <%= label %>
-    <% end %>
-  <% end %>
-</section>
+</main>

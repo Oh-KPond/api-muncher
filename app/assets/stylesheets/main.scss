@@ -6,13 +6,17 @@
 @import "styles/form.scss";
 @import "styles/homepage.scss";
 
+body {
+  background-color: #f2f2f2;
+}
 h1 {
   font-family: 'Slabo 27px', serif;
 }
 
-footer {
-  background-color: #f2f2f2;
+.credit {
+  background-color: #b3b3b3;
   padding: 2% 0;
+  text-align: center;
 }
 
 @media screen and (max-width: 600px) {

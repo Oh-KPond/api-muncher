@@ -9,14 +9,15 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
   </head>
 
   <body>
 
     <%= yield %>
 
-    <footer>
-      <p>Powered by Edamam</p>
+    <footer class="credit">
+      Powered by Edamam
     </footer>
 
   </body>

@@ -1,0 +1,15 @@
+.search_form {
+  margin: 0 auto;
+  text-align: right;
+  max-width: 35%;
+}
+
+.credit {
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .search_form {
+    max-width: 80%;
+  }
+}

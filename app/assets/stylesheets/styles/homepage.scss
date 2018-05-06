@@ -1,6 +1,10 @@
 .homepage-page-wrapper {
-  // TODO: get this to fillout the rest of the page
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 500px;
 }
+
 .search_form {
   margin: 0 auto;
   text-align: right;

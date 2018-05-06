@@ -3,7 +3,6 @@ class RecipesController < ApplicationController
   def index
     if params[:query].blank?
       redirect_to root_path
-      # flash
     else
       @query = params[:query]
       @recipes = EdamamApiWrapper.list_recipes(@query).paginate(page: params[:page], per_page: 10)
@@ -12,7 +11,13 @@ class RecipesController < ApplicationController
 
   # shows a single recipe : recipe GET  /recipes/:id(.:format)
   def show
-    @recipe = EdamamApiWrapper.show_recipe(params[:id])
+    recipe = EdamamApiWrapper.show_recipe(params[:id])
+    if recipe == nil
+      flash[:error] = "Recipe does not exist. Please do a new recipes search."
+      redirect_to root_path
+    else
+      @recipe = recipe
+    end
   end
 
   # form for search also root
